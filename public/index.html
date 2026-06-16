@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPCUA PLC Data Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏭 OPCUA PLC Data Transmission Simulator</h1>
+            <p class="subtitle">จำลองการส่งข้อมูลระหว่าง PLC หลายๆ ตัว</p>
+        </header>
+
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-label">⏰ Current Time:</span>
+                <span class="stat-value" id="currentTime">--:--:--</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Active Devices:</span>
+                <span class="stat-value" id="activeDevices">4</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Total Production:</span>
+                <span class="stat-value" id="totalProduction">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Last Update:</span>
+                <span class="stat-value" id="lastUpdate">--:--:--</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Status:</span>
+                <span class="stat-value" id="systemStatus">
+                    <span class="pulse-dot"></span> Running
+                </span>
+            </div>
+            <button class="refresh-btn" onclick="refreshData()">🔄 Refresh</button>
+        </div>
+
+        <div class="devices-grid" id="devicesContainer">
+            <!-- Devices will be loaded here -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
